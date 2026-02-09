@@ -1,5 +1,5 @@
 
-# MKPCTL — Modular Knowledge Platform CLI (v1.0.0)
+# MKPCTL — Modular Knowledge Platform CLI (v1.0.1)
 
 A zero-dependency CLI that validates and loads a **Core** knowledge base plus any number of **Modules** into a unified, query-ready aggregate (CSV + SQLite).
 
@@ -107,14 +107,14 @@ mkpctl build-labels --root ./my-kb --out ./my-kb/aggregated/labels_to_urn_merged
 
 ## Versioning
 
-This wheel is **v1.0.0** and generates **v1.0** Core-compatible data by default. Upgrade the Core to **v2.x** via a predicate-catalog PR and bump the CLI accordingly.
+This wheel is **v1.0.1** and generates **v1.0** Core-compatible data by default. Upgrade the Core to **v2.x** via a predicate-catalog PR and bump the CLI accordingly.
 
 ---
 
-## MKP + Claude + CLI (v1.0.4)
+## MKP + Claude + CLI (v1.0.5)
 
 - Specs: see `/specs/SPEC-001 …`, `/specs/SPEC-002 …`, `/specs/SPEC-003 …`
 - Claude: `.claude/` is installed; run **/mkp-bootstrap**, **/mkp-audit**, **/mkp-task**
-- CLI: use `mkpctl` from the local wheel at repo root
-- CI: `.github/workflows/mkp-audit.yml` (strict mode + optional --json-summary gating)
+- CLI: use `mkpctl` from the local wheel at repo root (requires mkpctl >= 1.0.1)
+- CI: `.github/workflows/mkp-audit.yml` (strict mode + SQLite + `--json-summary` gating)
 

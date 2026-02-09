@@ -1,4 +1,4 @@
-<!-- Part of MKP Claude integration pack v1.0.2 – update here, then re-export the pack. -->
+<!-- Part of MKP Claude integration pack v1.0.5 – update here, then re-export the pack. Requires mkpctl >= 1.0.1. -->
 ### Claude Code / MKP integration (quick reference)
 
 - `/mkp-audit` – validate and rebuild MKP → aggregated CSV + SQLite.

@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(PIP_NO_INDEX=1 python -m pip install:*)",
+      "Bash(mkpctl validate:*)",
+      "Bash(mkpctl load:*)",
+      "Bash(python -m zipfile:*)",
+      "Bash(sqlite3:*)",
+      "Bash(python -c:*)",
+      "Bash(dir:*)",
+      "Bash(python3:*)",
+      "Bash(mkpctl --version:*)",
+      "Bash(echo:*)",
+      "Bash(python -m unittest:*)"
+    ]
+  }
+}

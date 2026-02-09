@@ -1,6 +1,6 @@
-# Claude MKP Integration — One-File README (Pack v1.0.4)
+# Claude MKP Integration — One-File README (Pack v1.0.5)
 
-> Pack v1.0.2 adds CI snippets for `--json-summary` (see SPEC-003) but keeps the same Claude-facing behavior as v1.0.1.
+> Pack v1.0.5 ships `mkpctl >= 1.0.1` with native `--json-summary` support (see SPEC-003). Requires mkpctl >= 1.0.1.
 
 **What it is**: a drop-in pack that teaches Claude Code how to rebuild/validate your MKP and answer with URN-level evidence from the aggregated KB.
 
@@ -34,12 +34,12 @@
 - `/mkp-task` returns Answer + Evidence + Conflicts on a sample question.
 - `git status` shows no changes under Core/Modules.
 
-**Folder**: `claude_mkp_full_integration/`  •  **Version**: v1.0.4.0.2
+**Folder**: `claude_mkp_full_integration/`  •  **Version**: v1.0.5
 
 
 **Ontology changes:** see SPEC-001 (Modular Knowledge Platform) before proposing predicate or URN updates.
 
-## CI (default in v1.0.3)
+## CI (default in v1.0.5)
 
 The workflow uses `--json-summary` and gates on `exit_class == "success"` by default. See SPEC-003 for the full schema.
 

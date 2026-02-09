@@ -46,7 +46,7 @@ jobs:
         run: |
           mkpctl validate kb/00_Core_System kb/01_Module_DarkWeb --strict-predicates
 
-      - name: Load & Aggregate (no SQLite for speed)
+      - name: Load & Aggregate (strict + SQLite + JSON)
         run: |
           set -euo pipefail
           mkpctl load kb/00_Core_System kb/01_Module_DarkWeb \\

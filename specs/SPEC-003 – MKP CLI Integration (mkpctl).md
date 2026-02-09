@@ -8,6 +8,15 @@
 - Logging: counts, conflicts, top-3 predicates (stable CI log contract).
 - JSON summary: `--json-summary` emits a single versioned object on stdout.
 
+### Implementation Status
+| Feature | Status | Since |
+|---|---|---|
+| `validate`, `load`, `build-labels`, `demo` | Implemented | v1.0.0 |
+| `--json-summary` | Implemented | v1.0.1 |
+| `--write-sqlite` (explicit flag) | Implemented | v1.0.1 |
+| `--version` | Implemented | v1.0.1 |
+| SPEC-003 exit code families (21-25, 31-32, 41-42) | Implemented | v1.0.1 |
+
 ## JSON Summary (stable for 1.x)
 ```jsonc
 {
@@ -30,7 +39,7 @@ mkpctl validate ./Knowledge-Base/00_Core_System ./Knowledge-Base/NN_Module_* --s
 mkpctl load ./Knowledge-Base/00_Core_System ./Knowledge-Base/NN_Module_*   --out ./Knowledge-Base/aggregated --write-sqlite --strict-predicates --json-summary
 ```
 
-## CI usage (default in v1.0.4)
+## CI usage (default in v1.0.5)
 
 In v1.0.3, the default workflow uses `--json-summary` and gates on `exit_class == "success"`.
 
