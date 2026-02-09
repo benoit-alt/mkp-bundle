@@ -1,0 +1,8 @@
+module_id: darkweb
+namespace: darkweb
+version: 1.0.0
+compatible_core: ">=1.0.0, <2.0.0"
+depends_on: []
+last_updated: 2026-01-15
+maintainers: DW Team
+license: CC-BY-4.0

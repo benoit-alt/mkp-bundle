@@ -1,0 +1,11 @@
+Control_ID,Control_Area,Baseline_Tier,Strong_Tier,High_Risk_Tier
+passwords,Passwords,Password manager (cloud-based); unique per site,Password manager + passphrase vault master,Password manager (local); memorized high-entropy master
+mfa,MFA,TOTP authenticator app,urn:entity:mfa:urn:entity:mfa:fido2_security_key (primary) + TOTP (backup),Multiple FIDO2 keys; no SMS/TOTP fallback
+recovery,Recovery,Recovery codes in vault,Backup FIDO2 key stored offline,Air-gapped backup; dead-man-switch procedures
+device/os,Device/OS,"Current OS, auto-updates, FDE on",Hardened OS settings; reviewed permissions,Qubes OS or equivalent compartmentalization
+email,Email,Reputable provider; basic alias use,E2EE provider + unique alias per service,Compartmented personas; multiple providers
+browsing,Browsing,Firefox/Brave with strict settings,Mullvad Browser or hardened Firefox,Tor Browser for sensitive activities
+vpn,VPN,Optional (on untrusted networks),"Trusted VPN (audited, no-log) always-on",VPN or Tor depending on threat; not both naively
+dns,DNS,DoH via browser or OS,DoH/DoT to trusted resolver + ECH if available,Tor-based resolution; Onion services
+communications,Communications,Signal for messaging,Signal + self-hosted Matrix for groups,Compartmented identities; consider P2P/onion options
+payments,Payments,urn:entity:payment:urn:entity:payment:virtual_cards; avoid unnecessary data sharing,Prepaid cards for unlinkable purchases,urn:entity:payment:urn:entity:payment:cash or privacy-preserving methods where lawful

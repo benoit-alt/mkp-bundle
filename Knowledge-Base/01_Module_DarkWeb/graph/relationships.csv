@@ -1,0 +1,4 @@
+source_id,relation,target_id
+urn:entity:darkweb:market:hydra,PROVIDES,urn:entity:darkweb:service:escrow
+urn:entity:darkweb:service:escrow,RELATED_TO,urn:entity:payment:bitcoin
+urn:entity:darkweb:actor:darkoverlord,AFFILIATED_WITH,urn:entity:darkweb:market:hydra

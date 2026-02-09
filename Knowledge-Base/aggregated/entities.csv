@@ -1,0 +1,87 @@
+id,type,name,description,source_module
+urn:entity:organization:nist,organization,,US federal standards body for cybersecurity and authentication,core
+urn:entity:organization:ietf,organization,,Internet standards development organization,core
+urn:entity:standard:nist_sp_800_63b_4,standard,,Authentication and authenticator management guideline,core
+urn:entity:standard:rfc_7858,standard,,DNS over TLS specification,core
+urn:entity:standard:rfc_8484,standard,,DNS over HTTPS specification,core
+urn:entity:standard:rfc_9076,standard,,DNS privacy considerations,core
+urn:entity:standard:rfc_9230,standard,,Oblivious DNS over HTTPS specification,core
+urn:entity:standard:rfc_9250,standard,,DNS over QUIC specification,core
+urn:entity:technology:fido2,technology,,Phishing-resistant authentication standard,core
+urn:entity:technology:totp,technology,,Time-based authentication code mechanism,core
+urn:entity:technology:sms_otp,technology,,Text message based authentication codes,core
+urn:entity:technology:passkey,technology,,Platform-synced FIDO2 authentication,core
+urn:entity:technology:tor,technology,,Anonymity network using onion routing,core
+urn:entity:technology:tor_browser,technology,,Privacy-focused browser with fingerprinting resistance,core
+urn:entity:technology:vpn,technology,,Encrypted tunnel between device and VPN server,core
+urn:entity:technology:dns_over_https,technology,,DNS protocol encrypted within HTTPS,core
+urn:entity:technology:dns_over_tls,technology,,DNS protocol encrypted over TLS on port 853,core
+urn:entity:technology:dns_over_quic,technology,,DNS protocol encrypted using QUIC transport,core
+urn:entity:technology:oblivious_doh,technology,,DNS over HTTPS via proxy separating client IP from query,core
+urn:entity:technology:encrypted_client_hello,technology,,TLS extension encrypting ClientHello including SNI,core
+urn:entity:technology:signal_protocol,technology,,End-to-end encryption protocol for messaging,core
+urn:entity:technology:end_to_end_encryption,technology,,Encryption where only sender and recipient can decrypt content,core
+urn:entity:technology:full_disk_encryption,technology,,Encryption of entire storage volume,core
+urn:entity:software:bitlocker,software,,Windows full-disk encryption,core
+urn:entity:software:filevault,software,,macOS full-disk encryption,core
+urn:entity:software:luks,software,,Linux full-disk encryption standard,core
+urn:entity:software:signal,software,,End-to-end encrypted messaging application,core
+urn:entity:software:matrix,software,,Federated end-to-end encrypted messaging protocol,core
+urn:entity:software:element,software,,Matrix protocol client application,core
+urn:entity:software:protonmail,software,,End-to-end encrypted email service,core
+urn:entity:software:qubes_os,software,,Security-focused OS using compartmentalization,core
+urn:entity:software:mullvad_browser,software,,Privacy-focused browser with anti-fingerprinting,core
+urn:entity:software:brave,software,,Privacy-focused web browser,core
+urn:entity:software:firefox,software,,Mozilla web browser,core
+urn:entity:software:simplelogin,software,,Email aliasing and forwarding service,core
+urn:entity:software:bitwarden,software,,Cloud-based password manager,core
+urn:entity:software:onepassword,software,,Cloud-based password manager,core
+urn:entity:software:keepass,software,,Local-first password manager,core
+urn:entity:concept:mfa,concept,,Authentication using multiple factors,core
+urn:entity:concept:authentication_assurance_level,concept,,NIST framework for authentication strength,core
+urn:entity:concept:phishing_resistance,concept,,Authentication method cryptographically bound to channel,core
+urn:entity:concept:metadata,concept,,Data describing other data such as who when where,core
+urn:entity:concept:website_fingerprinting,concept,,Traffic analysis identifying websites from encrypted patterns,core
+urn:entity:concept:browser_fingerprinting,concept,,Tracking users via device and browser characteristics,core
+urn:entity:concept:sim_swap,concept,,Attack transferring phone number to attacker-controlled SIM,core
+urn:entity:concept:anonymity,concept,,State of being unidentifiable and unlinkable,core
+urn:entity:concept:privacy,concept,,Control over personal information and data minimization,core
+urn:entity:concept:zero_access_encryption,concept,,Service provider cannot decrypt user data,core
+urn:entity:concept:sealed_sender,concept,,Signal feature hiding sender from server,core
+urn:entity:cryptocurrency:bitcoin,cryptocurrency,,Pseudonymous cryptocurrency with transparent ledger,core
+urn:entity:cryptocurrency:monero,cryptocurrency,,Privacy-focused cryptocurrency with ring signatures,core
+urn:entity:concept:cbdc,concept,,Government-issued digital currency,core
+urn:entity:hardware:tpm,hardware,,Hardware chip for cryptographic key management,core
+urn:entity:hardware:secure_enclave,hardware,,Apple hardware security module,core
+urn:entity:hardware:trustzone,hardware,,ARM hardware isolation technology,core
+urn:entity:organization:idcare,organization,,Identity and cyber support service,core
+urn:entity:organization:fcc,organization,,US communications regulatory agency,core
+urn:entity:attack:credential_stuffing,attack,,Automated credential reuse attack,core
+urn:entity:attack:phishing,attack,,Social engineering attack to steal credentials,core
+urn:entity:attack:traffic_analysis,attack,,Analysis of encrypted traffic patterns for information,core
+urn:entity:attack:evil_maid,attack,,Physical access attack on unattended encrypted device,core
+urn:entity:os:ios,operatingsystem,,Apple mobile operating system,core
+urn:entity:os:android,operatingsystem,,Google mobile operating system,core
+urn:entity:os:windows,operatingsystem,,Microsoft desktop operating system,core
+urn:entity:os:macos,operatingsystem,,Apple desktop operating system,core
+urn:entity:os:linux,operatingsystem,,Open-source operating system family,core
+urn:entity:mfa:sms_otp,mfa,SMS OTP,,core
+urn:entity:mfa:totp_authenticator_app,mfa,TOTP (Authenticator App),,core
+urn:entity:mfa:push_notification,mfa,Push Notification,,core
+urn:entity:mfa:fido2_security_key,mfa,FIDO2 Security Key,,core
+urn:entity:mfa:passkeys_synced_fido2,mfa,Passkeys (synced FIDO2),,core
+urn:entity:payment:cash,payment,Cash,,core
+urn:entity:payment:prepaid_gift_cards,payment,Prepaid/Gift Cards,,core
+urn:entity:payment:virtual_cards,payment,Virtual Cards,,core
+urn:entity:payment:standard_crypto_bitcoin,payment,Standard Crypto (Bitcoin),,core
+urn:entity:payment:privacy_crypto_monero,payment,Privacy Crypto (Monero),,core
+urn:entity:payment:cbdc,payment,CBDC,,core
+urn:entity:adversary:opportunistic,adversary,Opportunistic Criminals,,core
+urn:entity:adversary:targeted_criminals_stalkers,adversary,Targeted Criminals/Stalkers,,core
+urn:entity:adversary:data_brokers_advertisers,adversary,Data Brokers/Advertisers,,core
+urn:entity:adversary:isp_enterprise_network,adversary,ISP/Enterprise Network,,core
+urn:entity:adversary:nation_state_targeted,adversary,Nation-State (Targeted),,core
+urn:entity:payment:bitcoin,Payment_Method,Bitcoin,Cryptocurrency,core
+urn:entity:darkweb:market:hydra,Marketplace,Hydra,Large RU-language darknet market,darkweb
+urn:entity:darkweb:actor:darkoverlord,Threat_Actor,The Dark Overlord,Ransomware/extortion group,darkweb
+urn:entity:darkweb:service:escrow,Service,Escrow Service,Marketplace escrow capability,darkweb

@@ -1,0 +1,21 @@
+Category,Key,Value
+System Identity,Device Name,Anton
+System Identity,OS Edition,Windows 10 Pro 22H2
+System Identity,OS Build,19045.2965
+System Identity,Processor,Intel Core i5-4690K @ 3.50GHz
+System Identity,RAM,16.0 GB (15.7 usable)
+System Identity,Install Date,2026-02-08
+User Identity,Primary User Profile,Ben
+User Identity,Microsoft 365 UPN,Benoit@TownRestaurant.onmicrosoft.com
+User Identity,Microsoft 365 Role,Global Administrator
+User Identity,Google Workspace Email,benoit@town.restaurant
+User Identity,Google Workspace Domain,town.restaurant
+User Identity,ChatGPT Email,bpm.bishopp@live.com
+Cloud Subscriptions,Microsoft 365 Business Standard,Qty: 28 | Upfront | Active: Renews on 3/3/2026
+Cloud Subscriptions,Exchange Online (Plan 1),Qty: 1 | Monthly | Active: Renews on 9/2/2026
+Cloud Subscriptions,Microsoft 365 Business Basic,Qty: 4 | Upfront | Active: Renews on 3/2/2026
+Cloud Subscriptions,Microsoft 365 Business Premium,Qty: 1 | Upfront | Active: Renews on 3/4/2026
+Cloud Subscriptions,Microsoft Entra ID Free,Qty: 1 | Upfront | Active
+AI Services,Claude Pro,v1.1.2321 (495628) - Active
+AI Services,Perplexity Enterprise Pro,Active - OAuth 2.0
+AI Services,ChatGPT Plus,Active

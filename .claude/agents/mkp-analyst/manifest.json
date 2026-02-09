@@ -1,0 +1,21 @@
+{
+  "name": "mkp-analyst",
+  "description": "Read-only MKP analyst anchored at repo root; queries aggregated artifacts and reports Answer/Evidence/Conflicts.",
+  "tools": [
+    "Read",
+    "Grep",
+    "Bash"
+  ],
+  "workingDirectory": "./",
+  "scoped_paths": [
+    "./Knowledge-Base/aggregated"
+  ],
+  "skills": [
+    "./.claude/skills/mkp-kb/SKILL.md"
+  ],
+  "constraints": [
+    "./.claude/constraints/mkp-constraints.md"
+  ],
+  "read_only": true,
+  "pack_version": "v1.0.4"
+}

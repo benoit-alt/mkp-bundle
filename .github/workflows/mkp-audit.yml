@@ -1,0 +1,121 @@
+name: MKP Audit
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+
+concurrency:
+  group: mkp-audit-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+- name: Install mkpctl (offline, local wheel)
+  shell: bash
+  run: |
+    set -euo pipefail
+    python -m pip --version
+    # Offline-only: refuse index/network installs
+    export PIP_NO_INDEX=1
+    export PIP_DISABLE_PIP_VERSION_CHECK=1
+    if ls ./mkpctl-*.whl 1>/dev/null 2>&1; then
+      python -m pip install --no-index ./mkpctl-*.whl
+    else
+      echo "ERROR: No ./mkpctl-*.whl found in repo root. Add the wheel or preinstall mkpctl."
+      exit 1
+    fi
+    mkpctl --version || mkpctl --help
+    jq --version
+
+      - name: Build demo KB (Core + DarkWeb)
+        run: |
+          mkpctl demo kb
+
+      - name: Validate (strict predicates)
+        run: |
+          mkpctl validate kb/00_Core_System kb/01_Module_DarkWeb --strict-predicates
+
+      - name: Load & Aggregate (no SQLite for speed)
+        run: |
+          set -euo pipefail
+          mkpctl load kb/00_Core_System kb/01_Module_DarkWeb \\
+            --out kb/aggregated --write-sqlite --strict-predicates --json-summary \\
+            > mkp_summary.json
+          # Gate: fail unless exit_class == "success"
+          jq -e '.exit_class == "success"' mkp_summary.json
+          # Surface JSON (human-friendly)
+          cat mkp_summary.json
+      - name: Static audits (URN, predicates, conflict_log columns)
+        run: |
+          python - <<'PY'
+          import csv, re, sys, os
+          errors = []
+
+          urn_re = re.compile(r"^urn:entity:([a-z0-9_]+):([a-z0-9_]+)(?::([a-z0-9_]+))?$")
+          std12 = {"IS_A","USES","PROVIDES","MITIGATES","EXPLOITS","TARGETS","LOCATED_IN","AFFILIATED_WITH","BLOCKS","REQUIRES","CONFLICTS_WITH","RELATED_TO"}
+
+          def check_urns(path, cols):
+              with open(path, newline='', encoding='utf-8') as f:
+                  r = csv.DictReader(f)
+                  for i, row in enumerate(r, 2):
+                      for c in cols:
+                          v = (row.get(c) or "").strip()
+                          if v and not urn_re.match(v):
+                              errors.append(f"{path}:{i} invalid URN in '{c}': {v}")
+
+          def check_predicates(path, col='relation'):
+              with open(path, newline='', encoding='utf-8') as f:
+                  r = csv.DictReader(f)
+                  for i, row in enumerate(r, 2):
+                      p = (row.get(col) or "").strip()
+                      if p and p not in std12:
+                          errors.append(f"{path}:{i} non-standard predicate: {p}")
+
+          # Aggregates produced by mkpctl load
+          ent = "kb/aggregated/entities.csv"
+          rel = "kb/aggregated/relationships.csv"
+          clg = "kb/aggregated/conflict_log.csv"
+
+          # URN checks
+          check_urns(ent, ["id"])
+          check_urns(rel, ["source_id","target_id"])
+
+          # Predicate catalog check (belt-and-braces; validate already enforces)
+          check_predicates(rel, "relation")
+
+          # conflict_log.csv columns must exist even if empty
+          expected = ["entity_urn","field","winning_value","losing_value","resolution_rule","winning_source_module"]
+          with open(clg, newline='', encoding='utf-8') as f:
+              reader = csv.reader(f)
+              try:
+                  header = next(reader)
+              except StopIteration:
+                  header = []
+          if header != expected:
+              errors.append(f"{clg} header mismatch.\n  expected: {expected}\n  found:    {header}")
+
+          if errors:
+              print("MKP Audit FAILED:")
+              for e in errors:
+                  print(" -", e)
+              sys.exit(1)
+          print("MKP Audit OK.")
+          PY
+
+      - name: Upload aggregated outputs (artifact)
+        uses: actions/upload-artifact@v4
+        with:
+          name: mkp-aggregated
+          path: kb/aggregated
+          if-no-files-found: error

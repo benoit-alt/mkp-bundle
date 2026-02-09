@@ -1,0 +1,8 @@
+module_id: core
+namespace: core
+version: 1.0.0
+compatible_core: "self"
+depends_on: []
+last_updated: 2026-02-01
+maintainers: Core Team
+license: CC-BY-4.0

@@ -1,0 +1,30 @@
+date,event,entity_ids,source_id,confidence,notes
+2016-05,RFC 7858 DNS over TLS specification published,urn:entity:standard:rfc_7858,urn:source:ietf__rfc_7858,high,IETF standard
+2018-03,GetMonero publishes response to empirical traceability analysis,urn:entity:cryptocurrency:monero,urn:source:getmonero__traceability_response,high,Community response to academic research
+2018-10,RFC 8484 DNS over HTTPS specification published,urn:entity:standard:rfc_8484,urn:source:wikipedia__dns_over_https,high,IETF standard
+2021-01,Mozilla Security Blog announces ECH as future of ESNI in Firefox,urn:entity:technology:encrypted_client_hello,urn:source:mozilla__encrypted_client_hello,high,Browser vendor adoption
+2021-07,RFC 9076 DNS privacy considerations published,urn:entity:standard:rfc_9076,urn:source:ietf__rfc_9076_dns_privacy,high,IETF standard
+2022-06,Anarc.at publishes Matrix metadata handling notes,urn:entity:software:matrix,urn:source:anarc_at__matrix_notes,high,Federated messaging analysis
+2022-06,RFC 9230 Oblivious DNS over HTTPS specification published,urn:entity:standard:rfc_9230,urn:source:rfc_editor__rfc_9230,high,IETF standard
+2023-05,Hacklab Greece publishes Qubes OS security by isolation documentation,urn:entity:software:qubes_os,urn:source:hacklabg__qubes_os_security_isolation,high,Security OS documentation
+2023-10,CIS publishes security control changes due to TLS ECH,urn:entity:technology:encrypted_client_hello,urn:source:cisecurity__tls_ech_security_controls,high,Enterprise security guidance
+2024,US government mandates phishing-resistant MFA adoption by end of FY2024,urn:entity:technology:fido2,urn:source:yubico__nist_sp_800_63_4,high,Federal mandate
+2024-07,Promon publishes iOS vs Android security comparison,urn:entity:os:ios;urn:entity:os:android,urn:source:promon__ios_vs_android_security,high,Platform security assessment
+2024-08,IMF publishes CBDC data use and privacy protection analysis,urn:entity:concept:cbdc,urn:source:imf__cbdc_data_privacy,high,Central bank digital currency framework
+2024-10,TRM Labs publishes Monero traceability challenges research review,urn:entity:cryptocurrency:monero,urn:source:trmlabs__monero_traceability,high,Blockchain analytics research
+2024-10,Meri Garden publishes metadata protection protocols analysis,urn:entity:software:signal;urn:entity:software:matrix,urn:source:meri_garden__metadata_protection_protocols,high,Secure messaging comparison
+2024,IDCARE reports 240% increase in SIM-swap cases with 90% no victim interaction,urn:entity:concept:sim_swap,urn:source:thomsonreuters__sim_swap_fraud_threat,high,Threat landscape evolution
+2024,FCC enacts SIM-Swap Rules requiring secure authentication for SIM changes,urn:entity:organization:fcc,urn:source:thomsonreuters__sim_swap_fraud_threat,high,US regulatory response
+2025-03,Proton VPN publishes VPN myths article,urn:entity:technology:vpn,urn:source:protonvpn__vpn_myths,high,VPN trust model education
+2025-04,Security.com publishes ECH insights from RSAC 2025,urn:entity:technology:encrypted_client_hello,urn:source:security_com__ech_rsac_2025,high,Industry conference findings
+2025-06,Dev74 publishes password manager complete comparison 2025,urn:entity:software:bitwarden;urn:entity:software:keepass,urn:source:dev74__password_manager_comparison_2025,high,Password manager evaluation
+2025-07,PETS 2025 publishes improved open-world fingerprinting threat paper,urn:entity:concept:website_fingerprinting,urn:source:petsymposium__improved_open_world_fingerprinting,high,Academic research
+2025-07,Smartframe publishes browser fingerprinting comprehensive guide,urn:entity:concept:browser_fingerprinting,urn:source:smartframe__browser_fingerprinting,high,Tracking mechanism analysis
+2025-07,Keepnet Labs publishes SIM swap fraud 2025 statistics,urn:entity:concept:sim_swap,urn:source:keepnetlabs__sim_swap_fraud_2025,high,Threat prevalence data
+2025-07,Reddit r/PrivatePackets publishes full-disk encryption showdown,urn:entity:technology:full_disk_encryption,urn:source:reddit_privatepackets__fde_showdown,high,FDE comparison
+2025-08,Enzoic publishes NIST 800-63B Rev 4 password security update,urn:entity:standard:nist_sp_800_63b_4,urn:source:enzoic__nist_800_63b_rev_4,high,Standard interpretation
+2025-08,Thomson Reuters publishes SIM swap fraud growing threat analysis,urn:entity:concept:sim_swap,urn:source:thomsonreuters__sim_swap_fraud_threat,high,Investigative journalism
+2025-07,NIST publishes SP 800-63B-4 Authentication and Authenticator Management,urn:entity:standard:nist_sp_800_63b_4,urn:source:nist__sp_800_63b_4_pdf,high,Federal authentication standard
+2025-10,arXiv publishes comprehensive survey of website fingerprinting attacks and defenses,urn:entity:concept:website_fingerprinting,urn:source:arxiv__comprehensive_survey_website_fingerprinting,high,Academic survey
+2025-11,BitHide publishes tracking privacy coins and chains analysis,urn:entity:cryptocurrency:monero,urn:source:bithide__tracking_privacy_coins,high,Privacy coin traceability
+2026-01,Dasroot publishes encrypted messaging comparison (Signal Matrix Session SimpleX),urn:entity:software:signal;urn:entity:software:matrix,urn:source:dasroot__encrypted_messaging_comparison,high,Messaging architecture comparison

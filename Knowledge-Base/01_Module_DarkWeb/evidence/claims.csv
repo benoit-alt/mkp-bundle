@@ -1,0 +1,3 @@
+claim_id,subject,predicate,object,source_id,observed_at,confidence
+DW-CLM-1,urn:entity:darkweb:market:hydra,PROVIDES,Escrow,SRC-1,2021-11-01T00:00:00Z,0.7
+DW-CLM-2,urn:entity:darkweb:market:hydra,LOCATED_IN,Russia,SRC-2,2022-04-05T00:00:00Z,0.6

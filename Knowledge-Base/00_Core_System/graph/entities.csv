@@ -1,0 +1,84 @@
+id,type,name,description
+urn:entity:organization:nist,organization,,US federal standards body for cybersecurity and authentication
+urn:entity:organization:ietf,organization,,Internet standards development organization
+urn:entity:standard:nist_sp_800_63b_4,standard,,Authentication and authenticator management guideline
+urn:entity:standard:rfc_7858,standard,,DNS over TLS specification
+urn:entity:standard:rfc_8484,standard,,DNS over HTTPS specification
+urn:entity:standard:rfc_9076,standard,,DNS privacy considerations
+urn:entity:standard:rfc_9230,standard,,Oblivious DNS over HTTPS specification
+urn:entity:standard:rfc_9250,standard,,DNS over QUIC specification
+urn:entity:technology:fido2,technology,,Phishing-resistant authentication standard
+urn:entity:technology:totp,technology,,Time-based authentication code mechanism
+urn:entity:technology:sms_otp,technology,,Text message based authentication codes
+urn:entity:technology:passkey,technology,,Platform-synced FIDO2 authentication
+urn:entity:technology:tor,technology,,Anonymity network using onion routing
+urn:entity:technology:tor_browser,technology,,Privacy-focused browser with fingerprinting resistance
+urn:entity:technology:vpn,technology,,Encrypted tunnel between device and VPN server
+urn:entity:technology:dns_over_https,technology,,DNS protocol encrypted within HTTPS
+urn:entity:technology:dns_over_tls,technology,,DNS protocol encrypted over TLS on port 853
+urn:entity:technology:dns_over_quic,technology,,DNS protocol encrypted using QUIC transport
+urn:entity:technology:oblivious_doh,technology,,DNS over HTTPS via proxy separating client IP from query
+urn:entity:technology:encrypted_client_hello,technology,,TLS extension encrypting ClientHello including SNI
+urn:entity:technology:signal_protocol,technology,,End-to-end encryption protocol for messaging
+urn:entity:technology:end_to_end_encryption,technology,,Encryption where only sender and recipient can decrypt content
+urn:entity:technology:full_disk_encryption,technology,,Encryption of entire storage volume
+urn:entity:software:bitlocker,software,,Windows full-disk encryption
+urn:entity:software:filevault,software,,macOS full-disk encryption
+urn:entity:software:luks,software,,Linux full-disk encryption standard
+urn:entity:software:signal,software,,End-to-end encrypted messaging application
+urn:entity:software:matrix,software,,Federated end-to-end encrypted messaging protocol
+urn:entity:software:element,software,,Matrix protocol client application
+urn:entity:software:protonmail,software,,End-to-end encrypted email service
+urn:entity:software:qubes_os,software,,Security-focused OS using compartmentalization
+urn:entity:software:mullvad_browser,software,,Privacy-focused browser with anti-fingerprinting
+urn:entity:software:brave,software,,Privacy-focused web browser
+urn:entity:software:firefox,software,,Mozilla web browser
+urn:entity:software:simplelogin,software,,Email aliasing and forwarding service
+urn:entity:software:bitwarden,software,,Cloud-based password manager
+urn:entity:software:onepassword,software,,Cloud-based password manager
+urn:entity:software:keepass,software,,Local-first password manager
+urn:entity:concept:mfa,concept,,Authentication using multiple factors
+urn:entity:concept:authentication_assurance_level,concept,,NIST framework for authentication strength
+urn:entity:concept:phishing_resistance,concept,,Authentication method cryptographically bound to channel
+urn:entity:concept:metadata,concept,,Data describing other data such as who when where
+urn:entity:concept:website_fingerprinting,concept,,Traffic analysis identifying websites from encrypted patterns
+urn:entity:concept:browser_fingerprinting,concept,,Tracking users via device and browser characteristics
+urn:entity:concept:sim_swap,concept,,Attack transferring phone number to attacker-controlled SIM
+urn:entity:concept:anonymity,concept,,State of being unidentifiable and unlinkable
+urn:entity:concept:privacy,concept,,Control over personal information and data minimization
+urn:entity:concept:zero_access_encryption,concept,,Service provider cannot decrypt user data
+urn:entity:concept:sealed_sender,concept,,Signal feature hiding sender from server
+urn:entity:cryptocurrency:bitcoin,cryptocurrency,,Pseudonymous cryptocurrency with transparent ledger
+urn:entity:cryptocurrency:monero,cryptocurrency,,Privacy-focused cryptocurrency with ring signatures
+urn:entity:concept:cbdc,concept,,Government-issued digital currency
+urn:entity:hardware:tpm,hardware,,Hardware chip for cryptographic key management
+urn:entity:hardware:secure_enclave,hardware,,Apple hardware security module
+urn:entity:hardware:trustzone,hardware,,ARM hardware isolation technology
+urn:entity:organization:idcare,organization,,Identity and cyber support service
+urn:entity:organization:fcc,organization,,US communications regulatory agency
+urn:entity:attack:credential_stuffing,attack,,Automated credential reuse attack
+urn:entity:attack:phishing,attack,,Social engineering attack to steal credentials
+urn:entity:attack:traffic_analysis,attack,,Analysis of encrypted traffic patterns for information
+urn:entity:attack:evil_maid,attack,,Physical access attack on unattended encrypted device
+urn:entity:os:ios,operatingsystem,,Apple mobile operating system
+urn:entity:os:android,operatingsystem,,Google mobile operating system
+urn:entity:os:windows,operatingsystem,,Microsoft desktop operating system
+urn:entity:os:macos,operatingsystem,,Apple desktop operating system
+urn:entity:os:linux,operatingsystem,,Open-source operating system family
+urn:entity:mfa:sms_otp,mfa,SMS OTP,
+urn:entity:mfa:totp_authenticator_app,mfa,TOTP (Authenticator App),
+urn:entity:mfa:push_notification,mfa,Push Notification,
+urn:entity:mfa:fido2_security_key,mfa,FIDO2 Security Key,
+urn:entity:mfa:passkeys_synced_fido2,mfa,Passkeys (synced FIDO2),
+urn:entity:payment:cash,payment,Cash,
+urn:entity:payment:prepaid_gift_cards,payment,Prepaid/Gift Cards,
+urn:entity:payment:virtual_cards,payment,Virtual Cards,
+urn:entity:payment:standard_crypto_bitcoin,payment,Standard Crypto (Bitcoin),
+urn:entity:payment:privacy_crypto_monero,payment,Privacy Crypto (Monero),
+urn:entity:payment:cbdc,payment,CBDC,
+urn:entity:adversary:opportunistic,adversary,Opportunistic Criminals,
+urn:entity:adversary:targeted_criminals_stalkers,adversary,Targeted Criminals/Stalkers,
+urn:entity:adversary:data_brokers_advertisers,adversary,Data Brokers/Advertisers,
+urn:entity:adversary:isp_enterprise_network,adversary,ISP/Enterprise Network,
+urn:entity:adversary:nation_state_targeted,adversary,Nation-State (Targeted),
+urn:entity:payment:bitcoin,Payment_Method,Bitcoin,Cryptocurrency
