@@ -21,22 +21,23 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-- name: Install mkpctl (offline, local wheel)
-  shell: bash
-  run: |
-    set -euo pipefail
-    python -m pip --version
-    # Offline-only: refuse index/network installs
-    export PIP_NO_INDEX=1
-    export PIP_DISABLE_PIP_VERSION_CHECK=1
-    if ls ./mkpctl-*.whl 1>/dev/null 2>&1; then
-      python -m pip install --no-index ./mkpctl-*.whl
-    else
-      echo "ERROR: No ./mkpctl-*.whl found in repo root. Add the wheel or preinstall mkpctl."
-      exit 1
-    fi
-    mkpctl --version || mkpctl --help
-    jq --version
+
+      - name: Install mkpctl (offline, local wheel)
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip --version
+          # Offline-only: refuse index/network installs
+          export PIP_NO_INDEX=1
+          export PIP_DISABLE_PIP_VERSION_CHECK=1
+          if ls ./mkpctl-*.whl 1>/dev/null 2>&1; then
+            python -m pip install --no-index ./mkpctl-*.whl
+          else
+            echo "ERROR: No ./mkpctl-*.whl found in repo root. Add the wheel or preinstall mkpctl."
+            exit 1
+          fi
+          mkpctl --version || mkpctl --help
+          jq --version
 
       - name: Build demo KB (Core + DarkWeb)
         run: |
