@@ -27,6 +27,9 @@ jobs:
         run: |
           set -euo pipefail
           python -m pip --version
+          # mkpctl 1.0.1 imports pandas at runtime but does not currently
+          # advertise it as wheel metadata; preinstall runtime deps first.
+          python -m pip install pandas
           # Offline-only: refuse index/network installs
           export PIP_NO_INDEX=1
           export PIP_DISABLE_PIP_VERSION_CHECK=1
