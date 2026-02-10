@@ -53,8 +53,8 @@ jobs:
       - name: Load & Aggregate (strict + SQLite + JSON)
         run: |
           set -euo pipefail
-          mkpctl load kb/00_Core_System kb/01_Module_DarkWeb \\
-            --out kb/aggregated --write-sqlite --strict-predicates --json-summary \\
+          mkpctl load kb/00_Core_System kb/01_Module_DarkWeb \
+            --out kb/aggregated --write-sqlite --strict-predicates --json-summary \
             > mkp_summary.json
           # Gate: fail unless exit_class == "success"
           jq -e '.exit_class == "success"' mkp_summary.json
