@@ -1,0 +1,11 @@
+dispute_id,urn,aspect,claim_id,stance,source_id,observed_at,last_updated,notes
+BP-C001,urn:entity:browsing:os:tails,attribute:blast_radius,CLM-BP-009,supports,SRC-BP-001,2026-02-09,2026-02-09,"Packet 1 describes Tails blast radius as full-session compromise under browser RCE"
+BP-C002,urn:entity:browsing:os:tails,attribute:blast_radius,CLM-BP-028,supports,SRC-BP-002,2026-02-09,2026-02-09,"Packet 2 confirms and adds forensic detail: SANS DFIR shows live RAM imaging yields extensive artefacts"
+BP-C003,urn:entity:browsing:technology:flatpak,attribute:isolation_effectiveness,CLM-BP-023,supports,SRC-BP-002,2026-02-09,2026-02-09,"Single-source claim: ~42% of Flatpak apps weaken isolation. No independent corroboration. Confidence capped at 0.70"
+BP-C004,urn:entity:browsing:os:qubes_whonix,attribute:isolation_rating,CLM-BP-008,supports,SRC-BP-001,2026-02-09,2026-02-09,"Packet 1: smallest blast radius under browser RCE"
+BP-C005,urn:entity:browsing:os:qubes_whonix,attribute:isolation_rating,CLM-BP-027,supports,SRC-BP-002,2026-02-09,2026-02-09,"Packet 2: moderate isolation against state-level attacker. Different scope (browser RCE vs state-level) — not contradictory but needs scoping caveat"
+BP-C006,urn:entity:browsing:architecture:vpn_then_tor,relation:recommendation,CLM-BP-040,refutes,SRC-BP-003,2026-02-09,2026-02-09,"Tor Project generally discourages VPN+Tor for typical users"
+BP-C007,urn:entity:browsing:architecture:vpn_then_tor,relation:recommendation,CLM-BP-032,supports,SRC-BP-003,2026-02-09,2026-02-09,"PrivacyGuides and some threat models conditionally recommend VPN→Tor to hide Tor usage from ISP"
+BP-C008,urn:entity:browsing:architecture:commercial_tor_vpn,attribute:architecture_transparency,CLM-BP-041,refutes,SRC-BP-003,2026-02-09,2026-02-09,"Commercial Tor-mode products are opaque and lack independent verification; some may not use genuine Tor circuits"
+BP-C009,urn:entity:browsing:defense:wtf_pad,attribute:effectiveness,CLM-BP-044,supports,SRC-BP-004,2026-02-09,2026-02-09,"Original WTF-PAD paper claimed near-random WF accuracy"
+BP-C010,urn:entity:browsing:defense:wtf_pad,attribute:effectiveness,CLM-BP-045,refutes,SRC-BP-004,2026-02-09,2026-02-09,"Later DF evaluation achieves ~90% accuracy against WTF-PAD; Tik-Tok achieves ~93.5%. Not a data contradiction but a significant qualifier: effectiveness depends on attack model generation"

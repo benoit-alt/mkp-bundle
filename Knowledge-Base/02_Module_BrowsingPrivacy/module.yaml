@@ -1,0 +1,18 @@
+module_id: browsing_privacy
+namespace: browsing
+version: 1.0.0
+compatible_core: ">=1.0.0, <2.0.0"
+depends_on: []
+last_updated: 2026-02-09
+maintainers:
+  - name: Core Team
+    contact: operator@mkp.local
+license: CC-BY-4.0
+hashes:
+  graph/entities.csv: sha256:b2fafa2c22e63b3879ae505b5051bc5ea7e5a382f5956a1cee89ed7c99cc88e3
+  graph/relationships.csv: sha256:5bd9303c11bfd0b27beff574658f2d0b5714249a4a55d02816ac43420dc139c7
+  evidence/claims.csv: sha256:e392094c2283fdf5fc866c06bd05af291b1c6b3fcd2cdc5db8c43013504e4748
+  evidence/sources.csv: sha256:d2fb94d12c5a3f0748f700e90831b43ee0a6f034b2c663df56ec2235ad5b3f6a
+loader_directives:
+  conflict_policy: [core_immutable, prefer_fresh, prefer_higher_source_confidence]
+  predicate_catalog: strict

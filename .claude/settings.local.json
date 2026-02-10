@@ -11,7 +11,11 @@
       "Bash(python3:*)",
       "Bash(mkpctl --version:*)",
       "Bash(echo:*)",
-      "Bash(python -m unittest:*)"
+      "Bash(python -m unittest:*)",
+      "Bash(wc:*)",
+      "Bash(pip show:*)",
+      "Bash(mkpctl --help:*)",
+      "Bash(unzip:*)"
     ]
   }
 }

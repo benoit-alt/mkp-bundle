@@ -256,3 +256,60 @@ urn:claim:table__choose_your_stack__report,TableProvided,Report provides choose-
 urn:claim:table__failure_modes_mitigations__report,TableProvided,Report provides failure modes and mitigations table mapping 12 failure scenarios to impacts and controls,urn:entity:concept:privacy,urn:source:dev74__password_manager_comparison_2025,failure 12 modes impacts mitigations,high,Deliverable appendix,core,,,,
 DW-CLM-1,,,,SRC-1,,0.7,,darkweb,urn:entity:darkweb:market:hydra,PROVIDES,Escrow,2021-11-01T00:00:00Z
 DW-CLM-2,,,,SRC-2,,0.6,,darkweb,urn:entity:darkweb:market:hydra,LOCATED_IN,Russia,2022-04-05T00:00:00Z
+CLM-BP-001,,,,SRC-BP-001,,0.95,,browsing_privacy,urn:entity:browsing:os:tails,PROVIDES,RAM-only execution with no writes to internal disk by default,2026-02-09
+CLM-BP-002,,,,SRC-BP-001,,0.90,,browsing_privacy,urn:entity:browsing:os:tails,PROVIDES,RAM overwrite on shutdown to mitigate cold-boot attacks,2026-02-09
+CLM-BP-003,,,,SRC-BP-001,,0.95,,browsing_privacy,urn:entity:browsing:os:tails,BLOCKS,Non-Tor traffic including DNS via OS-level firewall rules,2026-02-09
+CLM-BP-004,,,,SRC-BP-001,,0.90,,browsing_privacy,urn:entity:browsing:os:tails,PROVIDES,Optional persistent storage that is encrypted but forensically detectable as an encrypted volume,2026-02-09
+CLM-BP-005,,,,SRC-BP-001,,0.95,,browsing_privacy,urn:entity:browsing:os:whonix,PROVIDES,Two-VM architecture separating Gateway (Tor routing) from Workstation (applications),2026-02-09
+CLM-BP-006,,,,SRC-BP-001,,0.95,,browsing_privacy,urn:entity:browsing:technology:whonix_gateway,PROVIDES,Protocol-Leak-Protection routing all Workstation traffic through Tor,2026-02-09
+CLM-BP-007,,,,SRC-BP-001,,0.90,,browsing_privacy,urn:entity:browsing:os:kicksecure,BLOCKS,Open server ports by default; enables full-disk encryption in installer,2026-02-09
+CLM-BP-008,,,,SRC-BP-001,,0.90,,browsing_privacy,urn:entity:browsing:os:qubes_whonix,PROVIDES,Smallest blast radius under browser RCE: compromise confined to single AppVM,2026-02-09
+CLM-BP-009,,,,SRC-BP-001,,0.85,,browsing_privacy,urn:entity:browsing:os:tails,RELATED_TO,Live RAM capture of running Tails session can recover substantial user artefacts despite amnesic design,2026-02-09
+CLM-BP-010,,,,SRC-BP-001,,0.90,,browsing_privacy,urn:entity:browsing:os:tails,RELATED_TO,All Tor-based privacy OS stacks share Tor susceptibility to traffic correlation and website fingerprinting,2026-02-09
+CLM-BP-011,,,,SRC-BP-001,,0.90,,browsing_privacy,urn:entity:browsing:os:whonix,RELATED_TO,Normal persistent VMs on disk; no amnesic guarantee; requires full-disk encryption on host,2026-02-09
+CLM-BP-012,,,,SRC-BP-001,,0.95,,browsing_privacy,urn:entity:browsing:os:qubes_whonix,REQUIRES,Xen hypervisor and Qubes dom0 for hardware-level VM isolation,2026-02-09
+CLM-BP-013,,,,SRC-BP-001,,0.90,,browsing_privacy,urn:entity:browsing:os:kicksecure,PROVIDES,AppArmor enforcement and SUID disabler and permission hardener for host-OS attack surface reduction,2026-02-09
+CLM-BP-014,,,,SRC-BP-001,,0.85,,browsing_privacy,urn:entity:browsing:os:tails,MITIGATES,Physical seizure threat after shutdown via amnesic design on bare metal,2026-02-09
+CLM-BP-015,,,,SRC-BP-001,,0.85,,browsing_privacy,urn:entity:browsing:os:tails,RELATED_TO,Weaker isolation story for long-running compartmented workflows due to single-OS instance,2026-02-09
+CLM-BP-016,,,,SRC-BP-001,,0.95,,browsing_privacy,urn:entity:browsing:technology:xen_hypervisor,PROVIDES,Hardware-level VM isolation via Xen domains with separate security contexts,2026-02-09
+CLM-BP-017,,,,SRC-BP-001,,0.90,,browsing_privacy,urn:entity:browsing:technology:disposable_vm,PROVIDES,Session-level isolation: VM created from template and destroyed after use,2026-02-09
+CLM-BP-018,,,,SRC-BP-001,,0.90,,browsing_privacy,urn:entity:browsing:os:qubes_whonix,MITIGATES,Browser RCE blast radius by confining compromise to disposable AppVM,2026-02-09
+CLM-BP-019,,,,SRC-BP-001,,0.85,,browsing_privacy,urn:entity:browsing:os:tails,RELATED_TO,Running Tails in a VM undermines amnesic guarantees because host can inspect RAM and I/O,2026-02-09
+CLM-BP-020,,,,SRC-BP-001,,0.85,,browsing_privacy,urn:entity:browsing:os:whonix,RELATED_TO,Isolation quality depends on host OS and hypervisor security; host compromise defeats VM separation,2026-02-09
+CLM-BP-021,,,,SRC-BP-002,,0.95,,browsing_privacy,urn:entity:browsing:technology:docker,RELATED_TO,Container isolation shares kernel with host making kernel exploits a full-escape vector,2026-02-09
+CLM-BP-022,,,,SRC-BP-002,,0.90,,browsing_privacy,urn:entity:browsing:vulnerability:cve_2025_9074,EXPLOITS,runc container runtime enabling host compromise from container breakout,2026-02-09
+CLM-BP-023,,,,SRC-BP-002,,0.70,,browsing_privacy,urn:entity:browsing:technology:flatpak,RELATED_TO,Approximately 42 percent of Flatpak applications effectively weaken their own isolation through broad permission requests,2026-02-09
+CLM-BP-024,,,,SRC-BP-002,,0.90,,browsing_privacy,urn:entity:browsing:vulnerability:cve_2025_2783,EXPLOITS,Chrome browser process sandbox enabling code execution outside sandbox on Windows,2026-02-09
+CLM-BP-025,,,,SRC-BP-002,,0.90,,browsing_privacy,urn:entity:browsing:vulnerability:cve_2025_2857,EXPLOITS,Firefox and Tor Browser process sandbox enabling escape on Windows,2026-02-09
+CLM-BP-026,,,,SRC-BP-002,,0.85,,browsing_privacy,urn:entity:browsing:technology:docker,RELATED_TO,Containerised browser isolation is incremental hardening of mainstream OSes not a full anonymity architecture,2026-02-09
+CLM-BP-027,,,,SRC-BP-002,,0.80,,browsing_privacy,urn:entity:browsing:os:qubes_whonix,MITIGATES,State-level attacker with moderate isolation rating; Tails provides moderate-weak; containers provide weak-moderate,2026-02-09
+CLM-BP-028,,,,SRC-BP-002,,0.85,,browsing_privacy,urn:entity:browsing:os:tails,RELATED_TO,SANS DFIR forensic analysis shows memory imaging of live Tails sessions yields extensive recoverable artefacts,2026-02-09
+CLM-BP-029,,,,SRC-BP-002,,0.90,,browsing_privacy,urn:entity:browsing:technology:browser_sandbox,MITIGATES,Browser RCE by constraining renderer exploit to sandbox scope via multi-process isolation,2026-02-09
+CLM-BP-030,,,,SRC-BP-002,,0.85,,browsing_privacy,urn:entity:browsing:technology:podman,PROVIDES,Rootless container operation reducing blast radius of container escape vs root-daemon containers,2026-02-09
+CLM-BP-031,,,,SRC-BP-002,,0.85,,browsing_privacy,urn:entity:browsing:technology:snap,PROVIDES,AppArmor and seccomp confinement for sandboxed Linux applications,2026-02-09
+CLM-BP-032,,,,SRC-BP-003,,0.95,,browsing_privacy,urn:entity:browsing:architecture:vpn_then_tor,BLOCKS,ISP direct observation of Tor guard IPs; ISP sees only encrypted VPN tunnel,2026-02-09
+CLM-BP-033,,,,SRC-BP-003,,0.95,,browsing_privacy,urn:entity:browsing:architecture:vpn_then_tor,RELATED_TO,VPN provider can see user real IP and that it connects to Tor guards,2026-02-09
+CLM-BP-034,,,,SRC-BP-003,,0.90,,browsing_privacy,urn:entity:browsing:architecture:tor_then_vpn,PROVIDES,Destination sites see VPN server IP and cannot infer Tor usage from IP lists,2026-02-09
+CLM-BP-035,,,,SRC-BP-003,,0.90,,browsing_privacy,urn:entity:browsing:architecture:tor_then_vpn,RELATED_TO,VPN provider sees destination metadata and possibly content but not user real IP,2026-02-09
+CLM-BP-036,,,,SRC-BP-003,,0.90,,browsing_privacy,urn:entity:browsing:architecture:vpn_then_tor,RELATED_TO,Adding VPN before Tor does not prevent global adversary from correlating flows across both sides of Tor,2026-02-09
+CLM-BP-037,,,,SRC-BP-003,,0.85,,browsing_privacy,urn:entity:browsing:architecture:vpn_then_tor,RELATED_TO,VPN protocols such as OpenVPN can be reliably fingerprinted and blocked by censors using DPI,2026-02-09
+CLM-BP-038,,,,SRC-BP-003,,0.85,,browsing_privacy,urn:entity:browsing:architecture:vpn_then_tor,RELATED_TO,Empirical studies show commercial VPN providers are heterogeneous and some leak traffic or misrepresent logging policies,2026-02-09
+CLM-BP-039,,,,SRC-BP-003,,0.85,,browsing_privacy,urn:entity:browsing:architecture:vpn_then_tor,RELATED_TO,Data retention laws can require VPN providers in some jurisdictions to store connection logs for years,2026-02-09
+CLM-BP-040,,,,SRC-BP-003,,0.90,,browsing_privacy,urn:entity:browsing:architecture:vpn_then_tor,RELATED_TO,Tor Project documentation generally does not recommend using a VPN with Tor for typical users,2026-02-09
+CLM-BP-041,,,,SRC-BP-003,,0.85,,browsing_privacy,urn:entity:browsing:architecture:commercial_tor_vpn,RELATED_TO,Commercial Onion-over-VPN modes are typically opaque in architecture and lack peer-reviewed evaluation,2026-02-09
+CLM-BP-042,,,,SRC-BP-003,,0.85,,browsing_privacy,urn:entity:browsing:adversary:as_level_observer,EXPLOITS,Traffic correlation across autonomous systems observing both sides of Tor circuits,2026-02-09
+CLM-BP-043,,,,SRC-BP-003,,0.80,,browsing_privacy,urn:entity:browsing:technology:vpn_kill_switch,MITIGATES,Real IP exposure during VPN tunnel failure by blocking non-VPN traffic,2026-02-09
+CLM-BP-044,,,,SRC-BP-004,,0.95,,browsing_privacy,urn:entity:browsing:defense:wtf_pad,RELATED_TO,No widely used Tor Browser configuration currently ships a dedicated modern WF defense by default,2026-02-09
+CLM-BP-045,,,,SRC-BP-004,,0.90,,browsing_privacy,urn:entity:browsing:attack:deep_fingerprinting,EXPLOITS,WTF-PAD traces achieving approximately 90 percent closed-world accuracy,2026-02-09
+CLM-BP-046,,,,SRC-BP-004,,0.90,,browsing_privacy,urn:entity:browsing:attack:tik_tok,EXPLOITS,WTF-PAD traces achieving approximately 93.5 percent accuracy using directional timing features,2026-02-09
+CLM-BP-047,,,,SRC-BP-004,,0.85,,browsing_privacy,urn:entity:browsing:defense:detorrent,MITIGATES,WF attacker accuracy by approximately 61.5 percent relative to undefended Tor as best padding-only result,2026-02-09
+CLM-BP-048,,,,SRC-BP-004,,0.85,,browsing_privacy,urn:entity:browsing:defense:detorrent,MITIGATES,Flow correlation TPR at 10e-5 FPR to approximately 0.12 which is less than half of next-best defense,2026-02-09
+CLM-BP-049,,,,SRC-BP-004,,0.90,,browsing_privacy,urn:entity:browsing:defense:tamaraw,RELATED_TO,Fixed-rate padding can exceed 100 percent bandwidth overhead making large-scale deployment unlikely,2026-02-09
+CLM-BP-050,,,,SRC-BP-004,,0.90,,browsing_privacy,urn:entity:browsing:defense:tor_connection_padding,PROVIDES,Approximately 69 KB overhead per one-time connection with negligible added latency,2026-02-09
+CLM-BP-051,,,,SRC-BP-004,,0.90,,browsing_privacy,urn:entity:browsing:defense:tor_circuit_padding,RELATED_TO,Deployed for onion services but does not constitute comprehensive WF protection,2026-02-09
+CLM-BP-052,,,,SRC-BP-004,,0.85,,browsing_privacy,urn:entity:browsing:defense:walkie_talkie,MITIGATES,DF attack accuracy to approximately 49.7 percent closed-world near theoretical 50 percent bound but degrades UX substantially,2026-02-09
+CLM-BP-053,,,,SRC-BP-004,,0.80,,browsing_privacy,urn:entity:browsing:tool:wfdefproxy,RELATED_TO,Experiments show simulated and live-Tor defense implementations agree on relative strength rankings,2026-02-09
+CLM-BP-054,,,,SRC-BP-004,,0.90,,browsing_privacy,urn:entity:browsing:attack:deep_fingerprinting,RELATED_TO,Achieves approximately 98 percent closed-world accuracy on undefended Tor traces,2026-02-09
+CLM-BP-055,,,,SRC-BP-004,,0.85,,browsing_privacy,urn:entity:browsing:attack:deepcoffea,EXPLOITS,Entry-exit traffic correlation patterns for Tor circuit deanonymisation,2026-02-09
+CLM-BP-056,,,,SRC-BP-004,,0.85,,browsing_privacy,urn:entity:browsing:dataset:gtt23,RELATED_TO,Provides realistic WF evaluation with genuine Tor traces yielding lower accuracy than lab-only closed-world results,2026-02-09
+CLM-BP-057,,,,SRC-BP-004,,0.85,,browsing_privacy,urn:entity:browsing:defense:detorrent,RELATED_TO,Uses moderate dummy traffic with no intentional delays; bandwidth overhead lower than constant-rate schemes,2026-02-09
